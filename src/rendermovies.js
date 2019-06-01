@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Card, CardColumns } from 'react-bootstrap';
+import { 
+    Card, 
+    ButtonToolbar, 
+    Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import defaultposter from './img/not-available-coming-soon.jpg';
 import './index.css';
 import './App.css';
-// import { tsConstructorType } from '@babel/types';
 
 class Rendermovies extends Component {
     constructor(props) {
@@ -13,100 +16,31 @@ class Rendermovies extends Component {
         }
     }
 
+
     render() {
-        console.log(this.props)
         return (
-            <CardColumns className="my-5 mx-5">
-                <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                <Card className="mb-3">
+                    <Card.Img variant="top" style={{height: 520}} src={this.props.poster_path ?
+                        `https://image.tmdb.org/t/p/w500/${this.props.poster_path}` : defaultposter } />
+                    <ButtonToolbar className="justify-content-center mt-2 justify-item-center">
+                        <Button variant="warning">Genres</Button>
+                    </ButtonToolbar>
+
                     <Card.Body>
-                        <Card.Title>{this.props.original_title }</Card.Title>
-                        <Card.Text>{this.props.overview}</Card.Text>
+                        <p>Released: { this.props.release_date ? this.props.release_date : <i>Updated soon</i> }</p>
+                        <p>Rating: { this.props.vote_average ? this.props.vote_average : <i>Updated soon</i> }</p>
+                        
+                        <Card.Title style={{ height: 80, fontWeight: "bold"}}>{this.props.original_title ? 
+                            this.props.original_title : <i>Updated soon</i>}</Card.Title>
+                        
+                        <Card.Text style={{ overflowY: "scroll", height: 200}}>{this.props.overview ? 
+                            this.props.overview : <i>Updated soon</i>}</Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className="p-3">
-                    <blockquote className="blockquote mb-0 card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                            erat a ante.
-                     </p>
-                        <footer className="blockquote-footer">
-                            <small className="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional content.{' '}
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-                <Card bg="primary" text="white" className="text-center p-3">
-                    <blockquote className="blockquote mb-0 card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                            erat a ante.
-                    </p>
-                        <footer className="blockquote-footer">
-                            <small className="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </Card>
-                <Card className="text-center">
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional content.{' '}
-                        </Card.Text>
-                        <Card.Text>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card>
-                    <Card.Img src="holder.js/100px160" />
-                </Card>
-                <Card className="text-right">
-                    <blockquote className="blockquote mb-0 card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                            erat a ante.
-                    </p>
-                        <footer className="blockquote-footer">
-                            <small className="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </Card>
-                <Card>
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to
-                            show that equal height action.
-                    </Card.Text>
-                        <Card.Text>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </CardColumns>
         )
     }
-
 }
+
 
 
 export default Rendermovies;
