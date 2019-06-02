@@ -4,7 +4,6 @@ import {
     ButtonToolbar, 
     Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import defaultposter from './img/not-available-coming-soon.jpg';
 import './index.css';
 import './App.css';
 
@@ -21,9 +20,9 @@ class Rendermovies extends Component {
         return (
                 <Card className="mb-3">
                     <Card.Img variant="top" style={{height: 520}} src={this.props.poster_path ?
-                        `https://image.tmdb.org/t/p/w500/${this.props.poster_path}` : defaultposter } />
+                    `https://image.tmdb.org/t/p/w500/${this.props.poster_path}` : 'img/not-available-coming-soon.jpg' } />
                     <ButtonToolbar className="justify-content-center mt-2 justify-item-center">
-                        <Button variant="warning">Genres</Button>
+                    <Button style={{ backgroundColor: "#62ccc7", borderColor:"#62ccc7"}}>Genres</Button>
                     </ButtonToolbar>
 
                     <Card.Body>

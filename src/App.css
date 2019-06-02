@@ -5,9 +5,11 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 8s linear;
   height: 20vmin;
   pointer-events: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .App-header {
@@ -17,6 +19,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: 'Oswald';
   color: white;
 }
 
@@ -24,8 +27,6 @@
   color: #61dafb;
 }
 
-.App-body {
-}
 
 
 @keyframes App-logo-spin {
@@ -36,3 +37,5 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');

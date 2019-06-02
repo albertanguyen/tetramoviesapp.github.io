@@ -1,0 +1,44 @@
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #62ccc7;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 3em;
+}
+
+.search_input {
+    color:black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    justify-items: center;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 450px;
+    caret-color: rgb(22, 21, 21);
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_icon {
+    color: black;
+}
+
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
