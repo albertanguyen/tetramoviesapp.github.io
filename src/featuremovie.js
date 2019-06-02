@@ -5,7 +5,6 @@ import {
     Button
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import defaultposter from './img/not-available-coming-soon.jpg';
 import './index.css';
 import './App.css';
 
@@ -18,12 +17,12 @@ class Featuremovie extends Component {
             isloaded: true
         }
     }
-
+    
     render() {
         return (
             <Card className="d-flex d-inline-flex mb-5 mx-5 text-center" style={{ width: "800px" }}>
-                <Card.Img className="img-fluid" variant="top" src={ this.state.poster_path ? 
-                `https://image.tmdb.org/t/p/w500/${this.state.poster_path}` : defaultposter } />
+                <Card.Img className="img-fluid" variant="top" src={this.state.poster_path ?
+                    `https://image.tmdb.org/t/p/w500/${this.state.poster_path}` : 'img/not-available-coming-soon.jpg'} />
                 <Card.Body>
                     <p>Released: {this.state.release_date}</p>
                     <p>Rating: {this.state.vote_average}</p>
@@ -37,3 +36,5 @@ class Featuremovie extends Component {
 
 
 export default Featuremovie;
+
+
