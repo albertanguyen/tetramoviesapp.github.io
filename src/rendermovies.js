@@ -23,6 +23,7 @@ class Rendermovies extends Component {
                     `https://image.tmdb.org/t/p/w500/${this.props.poster_path}` : 'img/not-available-coming-soon.jpg' } />
                     <ButtonToolbar className="justify-content-center mt-2 justify-item-center">
                     <Button style={{ backgroundColor: "#62ccc7", borderColor:"#62ccc7"}}>Genres</Button>
+                    <Button style={{ backgroundColor: "black", borderColor:"#62ccc7"}} onClick={() =>this.props.watchTrailer(this.props.id)}>Trailer</Button>
                     </ButtonToolbar>
 
                     <Card.Body>
