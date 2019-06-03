@@ -12,7 +12,7 @@ class App extends Component {
         super(props)
         this.state = {
             movies: [],
-            search: '',
+            searchText: '',
             pageRequest: 1,
             activePage: 1,
             isloaded: false

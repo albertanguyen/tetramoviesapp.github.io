@@ -32,25 +32,25 @@ THE USER is
 
 The following **additional** features are implemented:
 THE USER is
-* [x] Able to see a logo in the main page (adapted and modified from the logo <a href="https://image.freepik.com/free-vector/cinema-logo-with-popcorn_23-2147494040.jpg">here</a>)
+* [x] Able to see a logo in the main page (adapted and modified from the logo <a href="https://image.freepik.com/free-vector/cinema-logo-with-popcorn_23-2147494040.jpg" target="_blank">here</a>)
 
 [//]: # (* [x] List anything else that you can get done to improve the page!)
 
 ## Time Spent and Lessons Learned
 * Review React-file architecture
-* Something that I should consider in my future project is using <a href="https://www.npmjs.com/package/dependency-check"><i>dependency-check</i></a>
+* Something that I should consider in my future project is using <a href="https://www.npmjs.com/package/dependency-check" target="_blank"><i>dependency-check</i></a>
 
 ## Describe any challenges encountered while building the app.
 History bugs:
-* violate eslint-import <a href="https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/first.md">import/first</a>
+* violate eslint-import <a href="https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/first.md" target="_blank">import/first</a>
 * cards overlap each other due to d-flex attribute
 * Text overflows inside card
 * data fetched from API is incomplete
 * Cannot load local image from public directory inside child component
 * Relative imports outside of src/ are not supported
 * how to fire API requests endlessly by dumbly using onClick={ this.getmovies() } 
-* Warning: <a href="https://reactjs.org/docs/lists-and-keys.html#keys">Each child in a list should have a unique "key" prop.</a>
-* <a href="https://stackoverflow.com/questions/49604821/cache-busting-with-create-react-app">Caching issue</a>
+* Warning: <a href="https://reactjs.org/docs/lists-and-keys.html#keys" target="_blank">Each child in a list should have a unique "key" prop.</a>
+* <a href="https://stackoverflow.com/questions/49604821/cache-busting-with-create-react-app" target="_blank">Caching issue</a>
 * import fontawesome in react
 
 ## Version 1.0.1
